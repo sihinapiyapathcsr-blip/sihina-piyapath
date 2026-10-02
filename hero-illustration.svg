@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t d">
+  <title id="t">Books with feather wings</title>
+  <desc id="d">An illustration of a stack of exercise books growing feather wings, with pencils, in front of a small village school under a warm sun.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE9DF"/>
+      <stop offset="1" stop-color="#FFF6F0"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFC48A"/>
+      <stop offset="0.6" stop-color="#FF9E7A"/>
+      <stop offset="1" stop-color="#FF9E7A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wing" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#F2724A"/>
+      <stop offset="0.5" stop-color="#D42A6B"/>
+      <stop offset="1" stop-color="#6D1F6B"/>
+    </linearGradient>
+    <linearGradient id="wing2" x1="1" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#F2724A"/>
+      <stop offset="0.5" stop-color="#D42A6B"/>
+      <stop offset="1" stop-color="#6D1F6B"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7D9C6"/>
+      <stop offset="1" stop-color="#EFC6AE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- sky + sun -->
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <circle cx="610" cy="150" r="150" fill="url(#sun)" opacity=".75"/>
+  <circle cx="610" cy="150" r="62" fill="#FFB27D"/>
+
+  <!-- distant hills + trees -->
+  <path d="M0 380 C120 330 220 345 330 365 C450 388 560 330 680 340 C740 345 780 360 800 368 V600 H0Z" fill="#F4C9B4"/>
+  <g fill="#C98E8A" opacity=".55">
+    <ellipse cx="90" cy="352" rx="38" ry="46"/><rect x="86" y="380" width="8" height="26"/>
+    <ellipse cx="735" cy="335" rx="34" ry="42"/><rect x="731" y="362" width="8" height="24"/>
+  </g>
+
+  <!-- school building -->
+  <g transform="translate(420 268)">
+    <path d="M-12 62 L150 6 L312 62 Z" fill="#B0185A"/>
+    <path d="M-12 62 L150 6 L312 62" fill="none" stroke="#8C1248" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="6" y="62" width="288" height="104" fill="#FFF3E8"/>
+    <rect x="6" y="62" width="288" height="104" fill="none" stroke="#E7C3B1" stroke-width="3"/>
+    <rect x="6" y="142" width="288" height="24" fill="#F7B8C9"/>
+    <g fill="#5B1747" opacity=".85">
+      <rect x="30" y="86" width="44" height="40" rx="4"/>
+      <rect x="226" y="86" width="44" height="40" rx="4"/>
+    </g>
+    <g stroke="#FFF3E8" stroke-width="3">
+      <path d="M52 86 V126 M30 106 H74"/><path d="M248 86 V126 M226 106 H270"/>
+    </g>
+    <rect x="124" y="92" width="52" height="74" rx="4" fill="#5B1747"/>
+    <circle cx="166" cy="130" r="3" fill="#FFB27D"/>
+    <rect x="100" y="70" width="100" height="14" rx="3" fill="#2E3E8C"/>
+    <!-- flag -->
+    <path d="M150 6 V-40" stroke="#5B1747" stroke-width="3"/>
+    <path d="M150 -40 L182 -32 L150 -22 Z" fill="#F2724A"/>
+  </g>
+
+  <!-- ground -->
+  <path d="M0 448 C200 430 600 430 800 448 V600 H0Z" fill="url(#ground)"/>
+  <g fill="#E4AE93" opacity=".6">
+    <ellipse cx="140" cy="520" rx="40" ry="5"/><ellipse cx="690" cy="540" rx="52" ry="6"/><ellipse cx="560" cy="500" rx="26" ry="4"/>
+  </g>
+
+  <!-- shadow under books -->
+  <ellipse cx="270" cy="508" rx="150" ry="16" fill="#C98E8A" opacity=".45"/>
+
+  <!-- left wing -->
+  <g transform="translate(250 330)">
+    <path d="M0 0 C-60 -40 -150 -60 -230 -150 C-200 -60 -150 -20 -80 10 Z" fill="url(#wing)"/>
+    <path d="M-10 20 C-80 0 -160 -10 -225 -70 C-190 0 -130 30 -60 40 Z" fill="url(#wing)" opacity=".85"/>
+    <path d="M-20 42 C-80 40 -140 40 -190 10 C-160 60 -110 75 -50 70 Z" fill="url(#wing)" opacity=".7"/>
+    <g stroke="#FFFFFF" stroke-opacity=".55" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M-10 0 C-80 -40 -150 -80 -220 -140"/>
+      <path d="M-20 22 C-90 5 -160 -20 -215 -65"/>
+      <path d="M-30 45 C-90 45 -140 35 -185 12"/>
+    </g>
+  </g>
+
+  <!-- right wing -->
+  <g transform="translate(290 330)">
+    <path d="M0 0 C60 -40 150 -60 230 -150 C200 -60 150 -20 80 10 Z" fill="url(#wing2)"/>
+    <path d="M10 20 C80 0 160 -10 225 -70 C190 0 130 30 60 40 Z" fill="url(#wing2)" opacity=".85"/>
+    <path d="M20 42 C80 40 140 40 190 10 C160 60 110 75 50 70 Z" fill="url(#wing2)" opacity=".7"/>
+    <g stroke="#FFFFFF" stroke-opacity=".55" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M10 0 C80 -40 150 -80 220 -140"/>
+      <path d="M20 22 C90 5 160 -20 215 -65"/>
+      <path d="M30 45 C90 45 140 35 185 12"/>
+    </g>
+  </g>
+
+  <!-- book stack -->
+  <g>
+    <!-- bottom book -->
+    <rect x="150" y="452" width="250" height="46" rx="6" fill="#2E3E8C"/>
+    <rect x="160" y="458" width="236" height="34" rx="3" fill="#FFFDF8"/>
+    <rect x="150" y="452" width="22" height="46" rx="4" fill="#24306E"/>
+    <path d="M175 466 H380 M175 476 H380 M175 486 H380" stroke="#E6DED4" stroke-width="2"/>
+    <!-- middle book -->
+    <rect x="166" y="406" width="214" height="48" rx="6" fill="#F2724A"/>
+    <rect x="172" y="412" width="200" height="36" rx="3" fill="#FFFDF8"/>
+    <rect x="358" y="406" width="22" height="48" rx="4" fill="#D85A34"/>
+    <path d="M182 422 H352 M182 432 H352 M182 442 H352" stroke="#E6DED4" stroke-width="2"/>
+    <!-- top book -->
+    <rect x="176" y="356" width="196" height="52" rx="6" fill="#B0185A"/>
+    <rect x="186" y="362" width="182" height="40" rx="3" fill="#FFFDF8"/>
+    <rect x="176" y="356" width="22" height="52" rx="4" fill="#8C1248"/>
+    <rect x="232" y="372" width="96" height="20" rx="4" fill="#FDE6EE"/>
+    <path d="M244 382 H316" stroke="#B0185A" stroke-width="3" stroke-linecap="round"/>
+    <!-- open book on top -->
+    <path d="M270 352 C240 330 205 330 184 338 L184 352 C205 346 240 346 270 360 Z" fill="#FFFDF8" stroke="#E7C3B1" stroke-width="2"/>
+    <path d="M270 352 C300 330 335 330 356 338 L356 352 C335 346 300 346 270 360 Z" fill="#FFFDF8" stroke="#E7C3B1" stroke-width="2"/>
+    <path d="M270 352 V360" stroke="#E7C3B1" stroke-width="2"/>
+    <path d="M200 342 C220 337 240 338 258 346 M282 346 C300 338 320 337 340 342" stroke="#D9CFC4" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- pencils -->
+  <g transform="translate(408 470) rotate(-18)">
+    <rect x="0" y="0" width="120" height="14" rx="2" fill="#FFC145"/>
+    <rect x="0" y="0" width="16" height="14" rx="2" fill="#F7A6B8"/>
+    <rect x="14" y="0" width="6" height="14" fill="#C9C9C9"/>
+    <path d="M120 0 L140 7 L120 14 Z" fill="#F6D9B5"/>
+    <path d="M133 4.5 L140 7 L133 9.5 Z" fill="#2A1A24"/>
+  </g>
+  <g transform="translate(430 498) rotate(-6)">
+    <rect x="0" y="0" width="104" height="12" rx="2" fill="#4FB37A"/>
+    <rect x="0" y="0" width="14" height="12" rx="2" fill="#F7A6B8"/>
+    <rect x="12" y="0" width="5" height="12" fill="#C9C9C9"/>
+    <path d="M104 0 L121 6 L104 12 Z" fill="#F6D9B5"/>
+    <path d="M115 4 L121 6 L115 8 Z" fill="#2A1A24"/>
+  </g>
+
+  <!-- floating feathers -->
+  <g fill="url(#wing)" opacity=".9">
+    <path d="M110 140 C130 110 160 100 175 104 C165 125 140 145 110 140 Z"/>
+    <path d="M520 110 C535 90 555 84 566 87 C558 102 542 114 520 110 Z"/>
+    <path d="M690 400 C708 382 728 378 738 381 C730 396 712 404 690 400 Z"/>
+  </g>
+  <g stroke="#FFFFFF" stroke-opacity=".6" stroke-width="1.5" fill="none">
+    <path d="M112 139 C130 125 150 112 172 105"/><path d="M522 109 C535 100 548 92 564 88"/><path d="M692 399 C706 392 720 386 736 382"/>
+  </g>
+
+  <!-- birds -->
+  <g stroke="#5B1747" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7">
+    <path d="M300 120 q10 -10 20 0 q10 -10 20 0"/>
+    <path d="M360 160 q7 -7 14 0 q7 -7 14 0"/>
+  </g>
+</svg>

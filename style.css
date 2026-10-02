@@ -241,3 +241,26 @@ h3 { font-size: 1.1rem; }
 .doc-link svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
 .doc-link-dark { margin: -16px 0 32px; background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.25); color: #fff; }
 .doc-link-dark:hover { border-color: #FF9C7A; color: #FF9C7A; }
+
+/* Hero illustration */
+.hero-photo img[src$=".svg"] { background: #FFF1EA; }
+
+/* Cash donation */
+.bank { margin-top: 40px; background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 28px 24px; box-shadow: var(--shadow); }
+@media (min-width: 720px) { .bank { padding: 32px; } }
+.bank-head h3 { font-family: var(--display); font-size: clamp(1.4rem, 3vw, 1.8rem); color: var(--plum); margin-bottom: 6px; }
+.bank-head p { margin: 0 0 22px; color: var(--muted); max-width: 60ch; }
+.bank-card { display: grid; gap: 22px; }
+@media (min-width: 820px) { .bank-card { grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; } }
+.bank-details { margin: 0; background: var(--blush); border-radius: 16px; padding: 6px 18px; }
+.bank-details div { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px dashed #E5C3D1; flex-wrap: wrap; }
+.bank-details div:last-child { border-bottom: 0; }
+.bank-details dt { color: var(--muted); font-size: .92rem; }
+.bank-details dd { margin: 0; font-weight: 700; text-align: right; display: flex; align-items: center; gap: 10px; }
+.bank-acc dd span#accNo { font-size: 1.2rem; letter-spacing: .04em; color: var(--plum); font-variant-numeric: tabular-nums; }
+.copy-btn { display: inline-flex; align-items: center; gap: 6px; border: 1.5px solid var(--magenta); background: #fff; color: var(--magenta); border-radius: 999px; padding: 6px 12px; min-height: 36px; font: inherit; font-size: .85rem; font-weight: 700; cursor: pointer; }
+.copy-btn:hover { background: var(--blush); }
+.copy-btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; }
+.bank-receipt p { margin: 0 0 14px; color: var(--muted); }
+.bank-receipt b { color: var(--ink); }
+.wa-btn-sm { max-width: 300px; }
