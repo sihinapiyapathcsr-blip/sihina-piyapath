@@ -17,7 +17,7 @@ window.SITE_CONFIG = {
 
   /* 3. KEY DATES (YYYY-MM-DD) */
   DROP_OFF_DEADLINE: "2026-10-14",
-  DONATION_DAY: "2026-10-30",
+  DONATION_DAY: "2026-10-27",
 
   /* Starting list — used only if the live sheet can't be reached.
      [ID, Category, Item, Specification, Unit, Needed, Received] */

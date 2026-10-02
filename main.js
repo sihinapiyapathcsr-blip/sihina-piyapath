@@ -25,11 +25,14 @@
     return Math.round((target - now) / 86400000);
   }
   (function () {
-    var d = daysUntil(C.DONATION_DAY || "2026-10-30");
+    var iso = C.DONATION_DAY || "2026-10-27";
+    var d = daysUntil(iso);
+    var pd = iso.split("-").map(Number);
+    var label = new Date(pd[0], pd[1] - 1, pd[2]).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
     var num = document.getElementById("daysToEvent");
     var sub = document.getElementById("daysToEventSub");
-    if (d > 0) { num.textContent = d; sub.textContent = (d === 1 ? "day" : "days") + " to go · 30 Oct 2026"; }
-    else if (d === 0) { num.textContent = "Today"; sub.textContent = "30 Oct 2026"; }
+    if (d > 0) { num.textContent = d; sub.textContent = (d === 1 ? "day" : "days") + " to go · " + label; }
+    else if (d === 0) { num.textContent = "Today"; sub.textContent = label; }
     else { num.textContent = "Done"; sub.textContent = "Thank you for your support!"; }
   })();
 

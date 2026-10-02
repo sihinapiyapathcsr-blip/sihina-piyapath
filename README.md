@@ -33,13 +33,13 @@ within a few minutes.
 | To change… | Edit |
 |---|---|
 | Who gets "I'll donate this" messages | `WHATSAPP_NUMBER` in `config.js` |
-| Drop-off deadline / donation day | `DROP_OFF_DEADLINE`, `DONATION_DAY` in `config.js`. Also update the text in `index.html` (search for "14 Oct" and "30 Oct"). |
+| Drop-off deadline / donation day | `DROP_OFF_DEADLINE`, `DONATION_DAY` in `config.js`. Also update the text in `index.html` (search for "14 Oct" and "27 Oct"). |
 | Text, team names, contact cards | `index.html` (search for the words you want to change) |
 | A photo | Upload a new file with the **same name** to replace it |
 
 Keep photos under about 300 KB each (resize to 1400 px wide) so the page loads fast on mobile data.
 
-## 4. After the donation day (30 Oct)
+## 4. After the donation day (27 Oct)
 
 Add a "2.0 Donation Day" gallery: copy the `<section ... id="story">` block in `index.html`,
 change the text and point it at the new photo file names.
