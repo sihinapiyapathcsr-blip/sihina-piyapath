@@ -58,7 +58,12 @@ h3 { font-size: 1.1rem; }
 .topbar { position: sticky; top: 0; z-index: 50; background: rgba(255,249,245,.88); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid transparent; transition: border-color .2s; }
 .topbar.scrolled { border-color: var(--line); }
 .topbar-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
-.brand img { height: 40px; width: auto; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand img { width: auto; }
+.brand-sp { height: 40px; }
+.brand-sab { height: 26px; mix-blend-mode: multiply; }
+.brand-sep { width: 1px; height: 26px; background: var(--line); }
+@media (max-width: 380px) { .brand-sab { height: 22px; } .brand-sp { height: 34px; } }
 .nav { display: none; gap: 26px; }
 .nav a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: .95rem; }
 .nav a:hover { color: var(--magenta); }
@@ -264,3 +269,7 @@ h3 { font-size: 1.1rem; }
 .bank-receipt p { margin: 0 0 14px; color: var(--muted); }
 .bank-receipt b { color: var(--ink); }
 .wa-btn-sm { max-width: 300px; }
+
+/* SAB Campus logo in hero */
+.hero-sab { height: 52px; width: auto; margin: 0 0 14px; mix-blend-mode: multiply; }
+@media (min-width: 900px) { .hero-sab { height: 60px; } }
