@@ -16,8 +16,8 @@ window.SITE_CONFIG = {
   WHATSAPP_NUMBER: "94740087127",
 
   /* 3. KEY DATES (YYYY-MM-DD) */
-  DROP_OFF_DEADLINE: "2026-10-14",
-  DONATION_DAY: "2026-10-27",
+  DROP_OFF_DEADLINE: "2026-11-02",
+  DONATION_DAY: "2026-11-04",
 
   /* Starting list — used only if the live sheet can't be reached.
      [ID, Category, Item, Specification, Unit, Needed, Received] */

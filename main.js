@@ -25,7 +25,7 @@
     return Math.round((target - now) / 86400000);
   }
   (function () {
-    var iso = C.DONATION_DAY || "2026-10-27";
+    var iso = C.DONATION_DAY || "2026-11-04";
     var d = daysUntil(iso);
     var pd = iso.split("-").map(Number);
     var label = new Date(pd[0], pd[1] - 1, pd[2]).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
