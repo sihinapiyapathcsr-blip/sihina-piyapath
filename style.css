@@ -273,3 +273,34 @@ h3 { font-size: 1.1rem; }
 /* SAB Campus logo in hero */
 .hero-sab { height: 52px; width: auto; margin: 0 0 14px; mix-blend-mode: multiply; }
 @media (min-width: 900px) { .hero-sab { height: 60px; } }
+
+/* ===== Update bar ===== */
+.update-bar { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px 10px; padding: 10px 16px; background: var(--plum-deep); color: #fff; text-decoration: none; font-size: .92rem; text-align: center; line-height: 1.4; }
+.update-bar b { color: #FFC9A8; }
+.update-bar:hover .ub-go { text-decoration: underline; }
+.ub-tag { background: var(--coral); color: #fff; font-weight: 800; font-size: .7rem; letter-spacing: .1em; padding: 3px 9px; border-radius: 999px; }
+.ub-go { font-weight: 700; color: #FFC9A8; white-space: nowrap; }
+
+/* ===== Grocery update ===== */
+.grocery { background: linear-gradient(180deg, #FFF1E8 0%, var(--cream) 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.gro-grid { display: grid; gap: 32px; align-items: center; }
+@media (min-width: 900px) { .gro-grid { grid-template-columns: 1.05fr .95fr; gap: 56px; } }
+.gro-copy h2 em { font-style: italic; color: var(--magenta); }
+.gro-progress { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin: 22px 0 6px; box-shadow: var(--shadow); }
+.gp-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; font-weight: 600; }
+.gp-top b { font-family: var(--display); font-size: 1.8rem; color: var(--ok); }
+.gro-progress .bar span { background: linear-gradient(90deg, #1E8A4C, #4FB37A); }
+.gro-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; align-items: center; }
+.gro-ctas .wa-btn { width: auto; max-width: none; }
+.gro-note { margin: 18px 0 0; color: var(--muted); font-size: .95rem; }
+.gro-note b { color: var(--ink); }
+.gro-card { background: #fff; border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow); overflow: hidden; }
+.gro-card-head { display: flex; align-items: center; gap: 14px; padding: 20px 24px; background: var(--plum); color: #fff; }
+.gro-card-head > span { font-size: 1.8rem; }
+.gro-card-head h3 { font-family: var(--display); font-size: 1.4rem; }
+.gro-card-head p { margin: 2px 0 0; color: #F1DCE6; font-size: .9rem; }
+.gro-list { list-style: none; margin: 0; padding: 6px 24px 10px; }
+.gro-list li { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 13px 0; border-bottom: 1px dashed var(--line); }
+.gro-list li:last-child { border-bottom: 0; }
+.gro-list span { font-weight: 600; }
+.gro-list b { flex: none; background: var(--blush); color: var(--magenta); font-size: .9rem; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
