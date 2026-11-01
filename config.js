@@ -11,9 +11,10 @@ window.SITE_CONFIG = {
   SHEET_CSV_URL: "https://docs.google.com/spreadsheets/d/16ABR9wuPLF8j2Ehhqz0fntoZc6XRxe9UKD38VpwPSy8/gviz/tq?tqx=out:csv&sheet=Book%20List",
 
   /* 1b. LIVE GROCERY LIST
-     Reads the "Grocery List" tab of the SAME Google Sheet.
-     Keep the tab named exactly "Grocery List". */
-  GROCERY_CSV_URL: "https://docs.google.com/spreadsheets/d/16ABR9wuPLF8j2Ehhqz0fntoZc6XRxe9UKD38VpwPSy8/gviz/tq?tqx=out:csv&headers=1&sheet=Grocery%20List",
+     Reads the FIRST tab of the separate grocery Google Sheet.
+     Keep the grocery list as the first tab, and the sheet shared as
+     "Anyone with the link → Viewer". */
+  GROCERY_CSV_URL: "https://docs.google.com/spreadsheets/d/1tA0xRL6iYtE9txp48P3JiBkabLILoVakso5Pk4KMEAs/gviz/tq?tqx=out:csv&headers=1",
 
   /* 2. WHATSAPP
      Item-specific "I'll donate this" messages go to this number.
