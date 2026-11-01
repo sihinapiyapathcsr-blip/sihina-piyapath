@@ -30,7 +30,7 @@
     <nav class="nav" aria-label="Main">
       <a href="#about">About</a>
       <a href="#school">The school</a>
-      <a href="#" data-open-update>Groceries</a>
+      <a href="#groceries">Groceries</a>
       <a href="#needs">Book list</a>
       <a href="#story">Our first project</a>
       <a href="#team">Team</a>
@@ -131,6 +131,37 @@
       <button class="mosaic-item m-b" data-full="students.jpg" data-caption="Students in their school uniforms"><img src="students.jpg" alt="Five students standing in their school uniforms" loading="lazy"></button>
       <button class="mosaic-item m-c" data-full="building.jpg" data-caption="The school building"><img src="building.jpg" alt="The school's tiled-roof building with painted learning charts" loading="lazy"></button>
       <button class="mosaic-item m-d" data-full="sign.jpg" data-caption="The school entrance"><img src="sign.jpg" alt="The school name board at the entrance" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GROCERIES ============ -->
+<section class="section grocery-bg" id="groceries">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">New · Grocery drive</p>
+      <h2>Groceries for the families</h2>
+      <p class="lead">With stationery almost 90% covered, we're now collecting a grocery pack for each of the <b>26 students</b>. Each pack holds the amounts below. Tap <b>I'll donate this</b> on any item, or message us to give cash instead.</p>
+    </div>
+
+    <div class="overall">
+      <div class="overall-top">
+        <span class="overall-label">Grocery progress</span>
+        <span class="overall-pct" id="groPct">0%</span>
+      </div>
+      <div class="bar bar-lg" role="progressbar" aria-label="Grocery progress" aria-valuemin="0" aria-valuemax="100" id="groBar" aria-valuenow="0"><span style="width:0%"></span></div>
+      <div class="overall-stats" id="groStats"></div>
+    </div>
+
+    <div class="items" id="groItems" aria-live="polite"><p class="loading">Loading the grocery list…</p></div>
+    <p class="source-note" id="groNote"></p>
+
+    <div class="gro-cta">
+      <div><b>Want to help with groceries?</b><span>Hand over by 2 November · CSR day 4 November 2026</span></div>
+      <div class="gro-cta-btns">
+        <a class="wa-btn" data-wa-grocery="94740087127" href="https://wa.me/94740087127" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.85 9.85 0 0 0 12.04 2zm5.8 14.03c-.25.69-1.44 1.32-1.98 1.37-.51.05-.98.24-3.3-.69-2.79-1.1-4.56-3.95-4.7-4.13-.13-.18-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.35.73-.35h.53c.17 0 .4-.06.62.48.24.56.8 1.94.87 2.08.07.14.12.3.02.48-.09.18-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.6.76 1.88.9.28.14.46.21.53.32.07.12.07.65-.18 1.33z"/></svg> Donate groceries</a>
+        <a class="btn btn-ghost" href="#cash">Donate cash</a>
+      </div>
     </div>
   </div>
 </section>
@@ -304,17 +335,18 @@
       <div class="np-top"><span>Stationery &amp; books collected</span><b>~90%</b></div>
       <div class="np-bar"><span></span></div>
     </div>
-    <p class="notice-lead">Thank you for your generous support! To help the children's families as well, we're now collecting these essential groceries:</p>
+    <p class="notice-lead">Thank you for your generous support! To help the children's families as well, we're now collecting a grocery pack for each of the <b>26 students</b>:</p>
     <ul class="notice-list">
-        <li><span>Rice (Samba / Nadu)</span><b>5 kg</b></li>
-        <li><span>Red Dhal</span><b>1 kg</b></li>
-        <li><span>Coconut Oil</span><b>500 ml</b></li>
-        <li><span>White Sugar</span><b>1 kg</b></li>
-        <li><span>Black Tea Leaves</span><b>200 g</b></li>
-        <li><span>Soya Meat</span><b>2 packs (90 g)</b></li>
-        <li><span>Chilli / Curry Powder</span><b>100 g</b></li>
-        <li><span>Table Salt</span><b>400 g</b></li>
+        <li><span>Rice (Samba / Nadu)</span><b>5 kg × 26 <small>(130 kg)</small></b></li>
+        <li><span>Red Dhal</span><b>1 kg × 26 <small>(26 kg)</small></b></li>
+        <li><span>Coconut Oil</span><b>500 ml bottle × 26 <small>(26 bottles)</small></b></li>
+        <li><span>White Sugar</span><b>1 kg × 26 <small>(26 kg)</small></b></li>
+        <li><span>Black Tea Leaves</span><b>200 g × 26 <small>(26 packets)</small></b></li>
+        <li><span>Soya Meat</span><b>2 packs (90 g) × 26 <small>(52 packs)</small></b></li>
+        <li><span>Chilli / Curry Powder</span><b>100 g × 26 <small>(26 packets)</small></b></li>
+        <li><span>Table Salt</span><b>400 g × 26 <small>(26 packets)</small></b></li>
     </ul>
+    <p class="notice-more"><a href="#groceries" data-close-update>See live grocery status →</a></p>
     <p class="notice-date">Please hand over by <b>2 November</b> · CSR day <b>4 November 2026</b></p>
     <div class="notice-actions">
       <a class="wa-btn" data-wa-grocery="94740087127" href="https://wa.me/94740087127" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.85 9.85 0 0 0 12.04 2zm5.8 14.03c-.25.69-1.44 1.32-1.98 1.37-.51.05-.98.24-3.3-.69-2.79-1.1-4.56-3.95-4.7-4.13-.13-.18-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.35.73-.35h.53c.17 0 .4-.06.62.48.24.56.8 1.94.87 2.08.07.14.12.3.02.48-.09.18-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.6.76 1.88.9.28.14.46.21.53.32.07.12.07.65-.18 1.33z"/></svg> Donate groceries</a>
@@ -343,7 +375,7 @@ document.querySelectorAll(".copy-btn").forEach(function (b) {
 (function () {
   var d = document.getElementById("updateNotice");
   if (!d || typeof d.showModal !== "function") return;
-  d.querySelectorAll("a[data-wa-grocery]").forEach(function (a) {
+  document.querySelectorAll("a[data-wa-grocery]").forEach(function (a) {
     a.href = "https://wa.me/" + a.getAttribute("data-wa-grocery") + "?text=" +
       encodeURIComponent("Hi! I'd like to donate groceries for Sihina Piyapath 2.0. Which items are still needed?");
   });

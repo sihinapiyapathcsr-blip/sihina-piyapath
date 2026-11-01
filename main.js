@@ -166,6 +166,62 @@
     setItems(fallbackItems(), "Showing our starting list. Message us to confirm what's still needed.");
   }
 
+  /* ---------- Grocery list ---------- */
+  var groEl = document.getElementById("groItems");
+  function donateGrocery(item) {
+    var msg = "Hi! I'd like to donate \"" + item.name + "\" (" + fmt(item.remaining) + " " + item.unit +
+      " still needed) for Sihina Piyapath 2.0 groceries. How should I send it?";
+    window.open(waLink(C.WHATSAPP_NUMBER, msg), "_blank", "noopener");
+  }
+  function renderGroceries(items, note) {
+    if (!groEl) return;
+    var avg = items.length ? items.reduce(function (s, i) { return s + i.pct; }, 0) / items.length : 0;
+    var pct = Math.round(avg * 100);
+    var done = items.filter(function (i) { return i.status === "done"; }).length;
+    document.getElementById("groPct").textContent = pct + "%";
+    var bar = document.getElementById("groBar");
+    bar.setAttribute("aria-valuenow", pct); bar.firstElementChild.style.width = pct + "%";
+    document.getElementById("groStats").innerHTML = "<span><b>" + done + "</b> of " + items.length + " grocery items fully covered</span>" +
+      "<span>Packs for <b>26 students</b></span>";
+    var list = items.slice().sort(function (a, b) { return (a.status === "done") - (b.status === "done"); });
+    var pills = { need: ["pill-need", "Needed"], prog: ["pill-prog", "In progress"], done: ["pill-done", "Fulfilled"] };
+    groEl.innerHTML = list.map(function (i, k) {
+      var p = pills[i.status];
+      return '<article class="item' + (i.status === "done" ? " is-done" : "") + '">' +
+        '<div class="item-top"><div><div class="item-name">' + esc(i.name) + '</div>' +
+        '<div class="item-spec">' + esc(i.spec) + '</div></div>' +
+        '<span class="pill ' + p[0] + '">' + p[1] + '</span></div>' +
+        '<div class="bar' + (i.status === "done" ? " done" : "") + '"><span style="width:' + Math.round(i.pct * 100) + '%"></span></div>' +
+        '<div class="item-nums"><span><b>' + fmt(i.received) + '</b> of ' + fmt(i.needed) + ' ' + esc(i.unit) + '</span>' +
+        (i.status === "done" ? "" : '<span><b>' + fmt(i.remaining) + '</b> still needed</span>') + '</div>' +
+        (i.status === "done"
+          ? '<span class="item-thanks">✓ Covered, thank you!</span>'
+          : '<button class="item-btn" type="button" data-g="' + k + '">' + WA_ICON + "I'll donate this</button>") +
+        '</article>';
+    }).join("");
+    groEl.querySelectorAll(".item-btn").forEach(function (b) {
+      b.addEventListener("click", function () { donateGrocery(list[+b.getAttribute("data-g")]); });
+    });
+    document.getElementById("groNote").textContent = note;
+  }
+  function groFallback() {
+    return (C.GROCERY_FALLBACK || []).map(function (r) { return toItem(r[0], r[1], r[2], r[3], r[4], r[5], r[6]); });
+  }
+  if (groEl) {
+    if (C.GROCERY_CSV_URL) {
+      fetch(C.GROCERY_CSV_URL + "&t=" + Date.now(), { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then(function (t) {
+          var now = new Date();
+          renderGroceries(itemsFromCSV(t), "Live from our grocery tracker · checked " +
+            now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) + ". Updates can take a few minutes to appear.");
+        })
+        .catch(function () { renderGroceries(groFallback(), "Showing our full grocery list. Message us to confirm what's still needed."); });
+    } else {
+      renderGroceries(groFallback(), "Showing our full grocery list. Message us to confirm what's still needed.");
+    }
+  }
+
   /* ---------- Lightbox ---------- */
   var lb = document.getElementById("lightbox");
   if (lb && typeof lb.showModal === "function") {

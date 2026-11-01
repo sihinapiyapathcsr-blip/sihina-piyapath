@@ -10,6 +10,11 @@ window.SITE_CONFIG = {
      and the tab must stay named exactly "Book List". */
   SHEET_CSV_URL: "https://docs.google.com/spreadsheets/d/16ABR9wuPLF8j2Ehhqz0fntoZc6XRxe9UKD38VpwPSy8/gviz/tq?tqx=out:csv&sheet=Book%20List",
 
+  /* 1b. LIVE GROCERY LIST
+     Reads the "Grocery List" tab of the SAME Google Sheet.
+     Keep the tab named exactly "Grocery List". */
+  GROCERY_CSV_URL: "https://docs.google.com/spreadsheets/d/16ABR9wuPLF8j2Ehhqz0fntoZc6XRxe9UKD38VpwPSy8/gviz/tq?tqx=out:csv&headers=1&sheet=Grocery%20List",
+
   /* 2. WHATSAPP
      Item-specific "I'll donate this" messages go to this number.
      Format: country code + number, no "+", spaces or leading 0. */
@@ -47,5 +52,18 @@ window.SITE_CONFIG = {
     ["B23","Uniform Fabric","Girls' Uniform Fabric","2 yd x 14 girls","yards",28,0],
     ["B24","Uniform Fabric","Boys' White Fabric","1.5 yd x 12 boys","yards",18,0],
     ["B25","Uniform Fabric","Boys' Blue Fabric","1 yd x 12 boys","yards",12,0]
+  ],
+
+  /* Grocery starting list — used only if the "Grocery List" tab can't be reached.
+     [ID, Category, Item, Specification, Unit, Needed, Received] */
+  GROCERY_FALLBACK: [
+    ["G01","Groceries","Rice (Samba / Nadu)","5 kg per student","kg",130,0],
+    ["G02","Groceries","Red Dhal","1 kg per student","kg",26,0],
+    ["G03","Groceries","Coconut Oil","500 ml bottle per student","bottles",26,0],
+    ["G04","Groceries","White Sugar","1 kg per student","kg",26,0],
+    ["G05","Groceries","Black Tea Leaves","200 g packet per student","packets",26,0],
+    ["G06","Groceries","Soya Meat","2 packs (90 g) per student","packs",52,0],
+    ["G07","Groceries","Chilli / Curry Powder","100 g packet per student","packets",26,0],
+    ["G08","Groceries","Table Salt","400 g packet per student","packets",26,0]
   ]
 };

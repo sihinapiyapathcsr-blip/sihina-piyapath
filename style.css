@@ -320,3 +320,25 @@ h3 { font-size: 1.1rem; }
   .notice-actions { position: sticky; bottom: 0; background: #fff; margin: 14px -20px 0; padding: 12px 20px 16px; border-top: 1px solid var(--line); box-shadow: 0 -8px 20px -12px rgba(46,13,37,.25); }
   .notice-actions .wa-btn, .notice-actions .btn { flex: 1 1 100%; min-height: 46px; }
 }
+
+/* ===== Grocery section ===== */
+.gro-cta { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; box-shadow: var(--shadow); }
+.gro-cta b { display: block; font-size: 1.1rem; color: var(--plum); }
+.gro-cta span { color: var(--muted); font-size: .92rem; }
+.gro-cta-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.gro-cta-btns .wa-btn { width: auto; max-width: none; min-height: 48px; font-size: 1rem; }
+/* pop-up quantities */
+.notice-list li b small { font-weight: 500; color: var(--muted); font-size: .78rem; }
+.notice-list li b { text-align: right; }
+.notice-more { margin: 12px 0 0; font-size: .92rem; }
+.notice-more a { color: var(--magenta); font-weight: 700; text-decoration: none; }
+.notice-more a:hover { text-decoration: underline; }
+.grocery-bg { background: linear-gradient(180deg, #FFF0E6 0%, #FFF9F5 100%); border-top: 1px solid var(--line); }
+
+.notice { width: min(720px, calc(100vw - 32px)); }
+@media (min-width: 600px) {
+  .notice-body { padding: 24px 34px 0; }
+  .notice-prog { margin: 14px 0 10px; }
+  .notice-list li { padding: 8px 0; }
+  .notice-actions { position: sticky; bottom: 0; background: #fff; margin: 16px -34px 0; padding: 14px 34px 20px; border-top: 1px solid var(--line); }
+}
