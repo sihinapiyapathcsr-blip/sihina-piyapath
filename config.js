@@ -4,67 +4,73 @@
    ========================================================= */
 window.SITE_CONFIG = {
 
-  /* 1. LIVE BOOK LIST
-     Reads the "Book List" tab of the project Google Sheet.
-     The sheet must stay shared as "Anyone with the link → Viewer",
-     and the tab must stay named exactly "Book List". */
-  SHEET_CSV_URL: "https://docs.google.com/spreadsheets/d/16ABR9wuPLF8j2Ehhqz0fntoZc6XRxe9UKD38VpwPSy8/gviz/tq?tqx=out:csv&sheet=Book%20List",
+  /* 1. FINAL REPORT
+     Paste the link to the final report between the quotes, e.g. a Google Drive
+     PDF shared as "Anyone with the link → Viewer". While it's empty, the
+     button says "Report coming soon". */
+  REPORT_URL: "",
 
-  /* 1b. LIVE GROCERY LIST
-     Reads the FIRST tab of the separate grocery Google Sheet.
-     Keep the grocery list as the first tab, and the sheet shared as
-     "Anyone with the link → Viewer". */
-  GROCERY_CSV_URL: "https://docs.google.com/spreadsheets/d/1tA0xRL6iYtE9txp48P3JiBkabLILoVakso5Pk4KMEAs/gviz/tq?tqx=out:csv&headers=1",
-
-  /* 2. WHATSAPP
-     Item-specific "I'll donate this" messages go to this number.
-     Format: country code + number, no "+", spaces or leading 0. */
-  WHATSAPP_NUMBER: "94740087127",
-
-  /* 3. KEY DATES (YYYY-MM-DD) */
-  DROP_OFF_DEADLINE: "2026-11-02",
-  DONATION_DAY: "2026-11-04",
-
-  /* Starting list — used only if the live sheet can't be reached.
-     [ID, Category, Item, Specification, Unit, Needed, Received] */
-  FALLBACK_ITEMS: [
-    ["B01","Exercise Books","CR Single Ruled 200 pg","200 pages","books",77,0],
-    ["B02","Exercise Books","CR Single Ruled 120 pg","120 pages","books",51,0],
-    ["B03","Exercise Books","CR Single Ruled 80 pg","80 pages","books",14,0],
-    ["B04","Exercise Books","CR Square Ruled 200 pg","200 pages","books",15,0],
-    ["B05","Exercise Books","CR Square Ruled 120 pg","120 pages","books",8,0],
-    ["B06","Exercise Books","Single Ruled 160 pg","160 pages","books",4,0],
-    ["B07","Exercise Books","Single Ruled 120 pg","120 pages","books",14,0],
-    ["B08","Exercise Books","Single Ruled 80 pg","80 pages","books",77,0],
-    ["B09","Exercise Books","Square Ruled 160 pg","160 pages","books",25,0],
-    ["B10","Exercise Books","Square Ruled 120 pg","120 pages","books",29,0],
-    ["B11","Exercise Books","Drawing Book 80 pg","80 pages","books",31,0],
-    ["B12","Exercise Books","1/2 Inch Square Ruled 80 pg","80 pages","books",10,0],
-    ["B13","Exercise Books","Botany Book 80 pg","80 pages","books",10,0],
-    ["B14","Exercise Books","Delisa Book 80 pg","80 pages","books",4,0],
-    ["B15","Stationery","Colour Pencils","Box of 12","boxes",26,0],
-    ["B16","Stationery","Pastels","Box of 24","boxes",26,0],
-    ["B17","Stationery","Pencils","Box of 12","boxes",26,0],
-    ["B18","Stationery","Glue","1 bottle","bottles",26,0],
-    ["B19","Stationery","Scissors","Small","pieces",26,0],
-    ["B20","Stationery","Sharpeners","","pieces",52,0],
-    ["B21","Stationery","Rulers","1 foot","pieces",26,0],
-    ["B22","Stationery","Erasers","","pieces",52,0],
-    ["B23","Uniform Fabric","Girls' Uniform Fabric","2 yd x 14 girls","yards",28,0],
-    ["B24","Uniform Fabric","Boys' White Fabric","1.5 yd x 12 boys","yards",18,0],
-    ["B25","Uniform Fabric","Boys' Blue Fabric","1 yd x 12 boys","yards",12,0]
-  ],
-
-  /* Grocery starting list — used only if the "Grocery List" tab can't be reached.
-     [ID, Category, Item, Specification, Unit, Needed, Received] */
-  GROCERY_FALLBACK: [
-    ["G01","Groceries","Rice (Samba / Nadu)","5 kg per student","kg",130,0],
-    ["G02","Groceries","Red Dhal","1 kg per student","kg",26,0],
-    ["G03","Groceries","Coconut Oil","500 ml bottle per student","bottles",26,0],
-    ["G04","Groceries","White Sugar","1 kg per student","kg",26,0],
-    ["G05","Groceries","Black Tea Leaves","200 g packet per student","packets",26,0],
-    ["G06","Groceries","Soya Meat","2 packs (90 g) per student","packs",52,0],
-    ["G07","Groceries","Chilli / Curry Powder","100 g packet per student","packets",26,0],
-    ["G08","Groceries","Table Salt","400 g packet per student","packets",26,0]
+  /* 2. DONOR WALL
+     One name per line, in quotes, with a comma after each.
+     Add, remove or fix spelling here; the website updates by itself. */
+  DONORS: [
+    "Himani Erandi",
+    "Janvi Gangodavila",
+    "Mr. Ruwan Peiris",
+    "Nimshi Andaraweera",
+    "Dinithi Perera",
+    "Charithma Sayurangi",
+    "Mr. Deshapriya Senanayake",
+    "Nethni Sansa",
+    "Rashmi Chamodya",
+    "Thiran De Silva",
+    "Chenara Sinethmi Konakalagala",
+    "Ahinsaa Dewmini",
+    "Mr. Hasitha Sanjeewa",
+    "19B WD Batch",
+    "20A WD Batch",
+    "Yoshitha Wickramasinge",
+    "20A WD MOHE Batch",
+    "Shane Binul",
+    "Punsisi Madara",
+    "4A WE Batch",
+    "Ms. Champika",
+    "Mr. Supun Madushanka",
+    "Mr. Dilshan Dissanayake",
+    "Ms. Isuri Chandeepa",
+    "Ms. Nishanthani Simon",
+    "Ms. Ishara Ranasinghne",
+    "Ms. Isuri Samaravickrama",
+    "Pipuni Walihinda",
+    "Nishadhi Rathnayake",
+    "Jivana Jeevaraj",
+    "Sasani Umayanagana",
+    "Sanuthi Muhahdiram",
+    "Himashi Sewwandi",
+    "Chathurya Hansani",
+    "Charith Wimukthi",
+    "Nethma Dissanayake",
+    "Lasitha Thanujaya",
+    "Upani Samandini",
+    "Dananjana Tharaka",
+    "Anuhas Nethsara",
+    "Nadee perera",
+    "Waruni Pabasara",
+    "Ariyadasa Book Shop Galle",
+    "Ananda Stationaries",
+    "Yashoda Weerasekara",
+    "4A WD Batch",
+    "Risindu Methmika",
+    "Zainul Lukman",
+    "Nimroth Botheju",
+    "4B WE Batch",
+    "03 C WE Batch",
+    "03 B WE & WD Batches",
+    "Inuri De Silva",
+    "Pruthuvi Rusara",
+    "Kawya Thathsarani",
+    "19A WE Batch",
+    "Ms. Nipunee Jayasuriya",
+    "Udani Sudarika"
   ]
 };
