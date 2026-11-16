@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Illustration: a small rural school at sunrise with paper planes and a feather in the sky">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A0D30"/>
+      <stop offset=".45" stop-color="#8E1C5A"/>
+      <stop offset=".78" stop-color="#E2506A"/>
+      <stop offset="1" stop-color="#F7A072"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFE7C2"/>
+      <stop offset=".55" stop-color="#FFC48A"/>
+      <stop offset="1" stop-color="#FFC48A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="feather" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#FFD3E0" stop-opacity=".75"/>
+    </linearGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5E1745"/><stop offset="1" stop-color="#3A0D30"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2F6B4F"/><stop offset="1" stop-color="#1E4A37"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF4E8"/><stop offset="1" stop-color="#F3DCC8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <!-- stars -->
+  <g fill="#fff" opacity=".7">
+    <circle cx="140" cy="90" r="2.5"/><circle cx="320" cy="160" r="2"/><circle cx="520" cy="70" r="2.5"/>
+    <circle cx="1080" cy="110" r="2"/><circle cx="1290" cy="60" r="2.5"/><circle cx="1480" cy="150" r="2"/>
+    <circle cx="760" cy="40" r="1.8"/><circle cx="1400" cy="250" r="1.6"/>
+  </g>
+  <!-- sun -->
+  <circle cx="1060" cy="640" r="330" fill="url(#sun)" opacity=".85"/>
+  <circle cx="1060" cy="640" r="130" fill="#FFE2B8"/>
+
+  <!-- clouds -->
+  <g fill="#FFFFFF" opacity=".16">
+    <ellipse cx="560" cy="470" rx="190" ry="30"/><ellipse cx="630" cy="450" rx="100" ry="26"/>
+    <ellipse cx="1320" cy="420" rx="210" ry="32"/><ellipse cx="1240" cy="398" rx="110" ry="28"/>
+  </g>
+
+  <!-- big feather (wings of dreams) -->
+  <g transform="translate(1020 250) rotate(-24) scale(.85)">
+    <path d="M0 0 C 120 -40 300 -30 430 40 C 300 60 160 70 0 0 Z" fill="url(#feather)"/>
+    <path d="M0 0 C 150 10 300 25 430 40" stroke="#C2185B" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/>
+    <g stroke="#F48FB1" stroke-width="2.5" opacity=".7" fill="none" stroke-linecap="round">
+      <path d="M80 6 L 110 -22"/><path d="M140 12 L 175 -26"/><path d="M200 18 L 240 -24"/><path d="M260 24 L 300 -16"/><path d="M320 30 L 355 -4"/>
+      <path d="M90 10 L 120 36"/><path d="M150 16 L 185 46"/><path d="M215 22 L 250 52"/><path d="M280 28 L 312 52"/>
+    </g>
+  </g>
+
+  <!-- paper planes with dashed trails -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round" opacity=".55">
+    <path d="M200 560 C 380 420 560 470 700 330"/>
+    <path d="M1500 560 C 1420 500 1360 470 1290 430"/>
+  </g>
+  <g fill="#FFFFFF">
+    <path d="M700 330 l 70 -46 l -28 72 l -14 -20 z"/>
+    <path d="M742 356 l -14 -20 l 42 -52 z" fill="#FFD3E0"/>
+    <path d="M1290 430 l -64 -30 l 70 -8 z"/>
+    <path d="M1290 430 l 6 -38 l -70 8 z" fill="#FFD3E0"/>
+  </g>
+
+  <!-- hills -->
+  <path d="M0 720 C 220 640 420 650 640 700 C 860 750 1080 640 1300 650 C 1450 656 1540 690 1600 700 L1600 1000 L0 1000 Z" fill="url(#hill1)"/>
+  <path d="M0 800 C 260 760 520 790 800 810 C 1080 830 1340 780 1600 790 L1600 1000 L0 1000 Z" fill="url(#hill2)"/>
+
+  <!-- trees -->
+  <g>
+    <rect x="236" y="690" width="16" height="110" fill="#3B2A22"/>
+    <circle cx="244" cy="660" r="70" fill="#2C7A55"/><circle cx="200" cy="690" r="48" fill="#25694A"/><circle cx="292" cy="694" r="50" fill="#2F8A60"/>
+    <rect x="1390" y="700" width="16" height="104" fill="#3B2A22"/>
+    <circle cx="1398" cy="668" r="66" fill="#2C7A55"/><circle cx="1352" cy="700" r="44" fill="#25694A"/><circle cx="1444" cy="702" r="46" fill="#2F8A60"/>
+  </g>
+  <!-- palm -->
+  <g transform="translate(1300 600)">
+    <path d="M0 210 C 6 140 4 70 -6 0" stroke="#4A3428" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <g fill="#2F8A60">
+      <path d="M-6 0 C 40 -30 90 -20 120 20 C 70 0 30 0 -6 0 Z"/>
+      <path d="M-6 0 C -50 -30 -100 -20 -130 18 C -80 0 -40 0 -6 0 Z"/>
+      <path d="M-6 0 C 20 -60 70 -80 100 -70 C 60 -50 20 -30 -6 0 Z"/>
+      <path d="M-6 0 C -30 -60 -80 -80 -110 -66 C -70 -50 -30 -30 -6 0 Z"/>
+    </g>
+  </g>
+
+  <!-- school building -->
+  <g transform="translate(470 560)">
+    <rect x="0" y="120" width="660" height="200" fill="url(#wall)"/>
+    <rect x="0" y="282" width="660" height="38" fill="#E9A27F"/>
+    <polygon points="-40,130 330,20 700,130" fill="#B4442E"/>
+    <polygon points="-40,130 330,20 700,130 700,146 330,38 -40,146" fill="#8E3322"/>
+    <g stroke="#C6563C" stroke-width="3" opacity=".6">
+      <line x1="40" y1="118" x2="620" y2="118"/><line x1="120" y1="95" x2="540" y2="95"/><line x1="200" y1="72" x2="460" y2="72"/>
+    </g>
+    <!-- door + windows -->
+    <rect x="290" y="190" width="80" height="130" rx="6" fill="#5B1747"/>
+    <circle cx="356" cy="258" r="4" fill="#FFD3E0"/>
+    <g fill="#7FB8D9" stroke="#FFFFFF" stroke-width="6">
+      <rect x="70" y="180" width="120" height="80" rx="6"/><rect x="470" y="180" width="120" height="80" rx="6"/>
+    </g>
+    <g stroke="#FFFFFF" stroke-width="4"><line x1="130" y1="180" x2="130" y2="260"/><line x1="530" y1="180" x2="530" y2="260"/></g>
+    <!-- sign board -->
+    <rect x="250" y="140" width="160" height="36" rx="6" fill="#1F3A6B"/>
+    <rect x="266" y="152" width="128" height="5" rx="2.5" fill="#FFFFFF" opacity=".8"/>
+    <rect x="290" y="162" width="80" height="5" rx="2.5" fill="#FFFFFF" opacity=".55"/>
+  </g>
+
+  <!-- flag pole -->
+  <g transform="translate(1160 650)">
+    <rect x="0" y="0" width="6" height="200" fill="#E8E0D8"/>
+    <path d="M6 6 C 46 -4 70 22 110 10 L 110 62 C 70 74 46 48 6 58 Z" fill="#F2724A"/>
+  </g>
+
+  <!-- path -->
+  <path d="M760 880 C 780 940 740 980 700 1000 L 900 1000 C 860 970 840 930 840 880 Z" fill="#E7C9A6" opacity=".85"/>
+
+  <!-- stack of books -->
+  <g transform="translate(980 840)">
+    <rect x="0" y="40" width="140" height="26" rx="4" fill="#C2185B"/>
+    <rect x="10" y="16" width="124" height="26" rx="4" fill="#F2724A"/>
+    <rect x="-4" y="-8" width="132" height="26" rx="4" fill="#6D1F6B"/>
+    <g fill="#FFFFFF" opacity=".85"><rect x="10" y="49" width="90" height="4" rx="2"/><rect x="22" y="25" width="80" height="4" rx="2"/><rect x="8" y="1" width="86" height="4" rx="2"/></g>
+  </g>
+  <!-- pencil -->
+  <g transform="translate(560 900) rotate(-12)">
+    <rect x="0" y="0" width="150" height="22" rx="3" fill="#FFC94A"/>
+    <rect x="0" y="0" width="22" height="22" fill="#F48FB1"/>
+    <polygon points="150,0 182,11 150,22" fill="#F3DCC8"/><polygon points="172,7 182,11 172,15" fill="#3A0D30"/>
+  </g>
+
+  <!-- 3.0 -->
+  <text x="120" y="300" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="220" fill="#FFFFFF" opacity=".95">3.0</text>
+  <text x="128" y="360" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="36" letter-spacing="10" fill="#FFD3E0">COMING 2027</text>
+</svg>
