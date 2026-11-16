@@ -25,6 +25,17 @@
 
   /* ---------- 3.0 school suggestion form → WhatsApp ---------- */
   var form = document.getElementById("suggest");
+  var openBtn = document.getElementById("openSuggest");
+  function showForm() {
+    if (!form) return;
+    form.hidden = false; if (openBtn) { openBtn.setAttribute("aria-expanded", "true"); openBtn.hidden = true; }
+    form.scrollIntoView({ behavior: "smooth", block: "start" });
+    setTimeout(function () { var f = form.querySelector("input"); if (f) f.focus({ preventScroll: true }); }, 500);
+  }
+  if (openBtn) openBtn.addEventListener("click", showForm);
+  document.querySelectorAll('a[href="#next"]').forEach(function (a) {
+    if (/suggest/i.test(a.textContent)) a.addEventListener("click", function (e) { e.preventDefault(); showForm(); });
+  });
   if (form) {
     var alt = document.getElementById("altForm");
     if (alt && C.SUGGEST_FORM_URL) { alt.href = C.SUGGEST_FORM_URL; alt.hidden = false; }
@@ -40,17 +51,14 @@
       if (bad.length) { err.hidden = false; bad[0].focus(); return; }
       err.hidden = true;
       var v = function (n) { var f = form.elements[n]; return f ? String(f.value || "").trim() : ""; };
-      var needs = Array.prototype.slice.call(form.querySelectorAll('input[name="needs"]:checked')).map(function (c) { return c.value; });
       var lines = [
         "*School suggestion – Sihina Piyapath 3.0*", "",
         "*School:* " + v("school"),
         "*Location:* " + v("town") + ", " + v("district") + " District",
-        "*Students:* " + (v("students") || "Not sure") + " (" + v("grades") + ")",
-        "*Main needs:* " + (needs.length ? needs.join(", ") : "Not specified"),
-        "*Why this school:* " + v("why")
+        "*Why this school:* " + v("why"), "",
+        "*Suggested by:* " + v("name"),
+        "*Phone:* " + v("phone")
       ];
-      if (v("principal")) lines.push("*Principal / teacher contact:* " + v("principal"));
-      lines.push("", "*Suggested by:* " + v("name") + " (" + v("relation") + ")", "*Phone:* " + v("phone"));
       var url = "https://wa.me/" + (C.WHATSAPP_NUMBER || "94740087127") + "?text=" + encodeURIComponent(lines.join("\n"));
       window.open(url, "_blank", "noopener");
     });
@@ -105,7 +113,7 @@
 
   /* ---------- Gentle reveal on scroll ---------- */
   if ("IntersectionObserver" in window) {
-    var els = document.querySelectorAll(".section-head, .tl-card, .sp2-copy, .video-frame, .ph, .stats li, .team-group, .process li, .sp3-art");
+    var els = document.querySelectorAll(".section-head, .tl-card, .sp2-copy, .video-frame, .ph, .stats li, .team-group, .sp3-art");
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
     }, { rootMargin: "0px 0px -8% 0px" });

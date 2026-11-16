@@ -102,7 +102,7 @@
         </div>
       </li>
       <li class="tl-card tl-next">
-        <img src="sp3-art.svg" alt="Illustration of a rural school at sunrise for Sihina Piyapath 3.0" loading="lazy">
+        <img src="sp3-cover.jpg" alt="Sihina Piyapath 3.0, coming 2027" loading="lazy">
         <div class="tl-body">
           <span class="tag tag-next">Coming next</span>
           <h3>Sihina Piyapath 3.0</h3>
@@ -201,84 +201,43 @@
       <div class="sp3-copy">
         <p class="eyebrow">Coming next · 2027</p>
         <h2>Sihina Piyapath 3.0</h2>
-        <p class="lead">The next batch will carry the wings forward to a new school. <b>Know a primary school that needs support?</b> Tell us about it. Suggestions from teachers, parents, past pupils and the community help us find the children who need it most.</p>
-        <a href="#suggest" class="btn btn-primary">Suggest a school</a>
+        <p class="lead">Know a rural primary school that needs support? Suggest it for our next project.</p>
+        <ol class="steps-mini">
+          <li><span>1</span>Suggest</li><li><span>2</span>We review</li><li><span>3</span>We visit</li><li><span>4</span>We announce</li>
+        </ol>
+        <button class="btn btn-primary" type="button" id="openSuggest" aria-expanded="false" aria-controls="suggest">Suggest a school</button>
       </div>
-      <figure class="sp3-art"><img src="sp3-art.svg" alt="Illustration of a small rural school at sunrise with paper planes and a feather in the sky" width="1600" height="1000"></figure>
+      <figure class="sp3-art"><img src="sp3-cover.jpg" alt="Sihina Piyapath 3.0, coming 2027" width="1600" height="1000" loading="lazy"></figure>
     </div>
 
-    <h3 class="sub-h">How a school is chosen</h3>
-    <ol class="process">
-      <li><span class="pn">1</span><b>Suggest</b><span>Send us the school's details using the form below. It takes about two minutes.</span></li>
-      <li><span class="pn">2</span><b>Review</b><span>The 3.0 team and the Department of Business Analytics review every suggestion.</span></li>
-      <li><span class="pn">3</span><b>Visit &amp; confirm</b><span>We speak to the principal and visit the shortlisted schools to understand their needs.</span></li>
-      <li><span class="pn">4</span><b>Announce</b><span>The chosen school is announced here, along with its list of needs.</span></li>
-    </ol>
-
-    <div class="criteria">
-      <b>What we look for</b>
-      <ul>
-        <li>A small primary school (Grades 1–5) in a rural or remote area</li>
-        <li>Families who find it hard to afford books, stationery and uniforms</li>
-        <li>Little or no support from other donors or programmes</li>
-        <li>Reachable from Colombo for a one-day visit</li>
-      </ul>
-    </div>
-
-    <form class="suggest" id="suggest" novalidate>
+    <form class="suggest" id="suggest" novalidate hidden>
       <div class="suggest-head">
-        <h3>Suggest a school for Sihina Piyapath 3.0</h3>
-        <p>Fields marked <span class="req">*</span> are required. When you tap <b>Send suggestion</b>, WhatsApp opens with your answers already written, ready to send to our coordinator.</p>
+        <h3>Suggest a school</h3>
+        <p>Fill in the details and tap <b>Send</b>. WhatsApp opens with your message ready for our coordinator.</p>
       </div>
-      <fieldset>
-        <legend>About the school</legend>
-        <div class="fgrid">
-          <label class="f-full"><span class="lt">School name <span class="req">*</span></span>
-            <input name="school" required autocomplete="off" placeholder="e.g. Sri Sumana Primary School"></label>
-          <label><span class="lt">Village / town <span class="req">*</span></span>
-            <input name="town" required autocomplete="off"></label>
-          <label><span class="lt">District <span class="req">*</span></span>
-            <select name="district" required>
-              <option value="">Choose…</option>
-              <option>Ampara</option><option>Anuradhapura</option><option>Badulla</option><option>Batticaloa</option><option>Colombo</option><option>Galle</option><option>Gampaha</option><option>Hambantota</option><option>Jaffna</option><option>Kalutara</option><option>Kandy</option><option>Kegalle</option><option>Kilinochchi</option><option>Kurunegala</option><option>Mannar</option><option>Matale</option><option>Matara</option><option>Monaragala</option><option>Mullaitivu</option><option>Nuwara Eliya</option><option>Polonnaruwa</option><option>Puttalam</option><option>Ratnapura</option><option>Trincomalee</option><option>Vavuniya</option>
-            </select></label>
-          <label><span class="lt">Number of students (approx.)</span>
-            <input name="students" type="number" min="1" inputmode="numeric"></label>
-          <label><span class="lt">Grades</span>
-            <select name="grades"><option>Grades 1–5</option><option>Grades 1–11</option><option>Grades 1–13</option><option>Other</option></select></label>
-        </div>
-        <div class="checks" role="group" aria-label="Main needs">
-          <span class="checks-label">Main needs</span>
-          <label><input type="checkbox" name="needs" value="Exercise books">Exercise books</label>
-          <label><input type="checkbox" name="needs" value="Stationery">Stationery</label>
-          <label><input type="checkbox" name="needs" value="Uniforms">Uniforms</label>
-          <label><input type="checkbox" name="needs" value="Shoes & bags">Shoes &amp; bags</label>
-          <label><input type="checkbox" name="needs" value="Library / story books">Library / story books</label>
-          <label><input type="checkbox" name="needs" value="Groceries for families">Groceries for families</label>
-          <label><input type="checkbox" name="needs" value="School facilities">School facilities</label>
-        </div>
-        <label class="f-full"><span class="lt">Why should we choose this school? <span class="req">*</span></span>
-            <textarea name="why" required rows="4" placeholder="Tell us about the children, the families and what the school needs most."></textarea></label>
-        <label class="f-full"><span class="lt">Principal or teacher contact (optional)</span>
-            <input name="principal" autocomplete="off" placeholder="Name and phone number, if you have it"></label>
-      </fieldset>
-      <fieldset>
-        <legend>About you</legend>
-        <div class="fgrid">
-          <label><span class="lt">Your name <span class="req">*</span></span>
-            <input name="name" required autocomplete="name"></label>
-          <label><span class="lt">Your phone / WhatsApp <span class="req">*</span></span>
-            <input name="phone" required type="tel" autocomplete="tel" inputmode="tel"></label>
-          <label class="f-full"><span class="lt">How do you know the school?</span>
-            <select name="relation"><option>Teacher / principal</option><option>Parent</option><option>Past pupil</option><option>Community member</option><option>SAB Campus student or staff</option><option>Other</option></select></label>
-        </div>
-      </fieldset>
-      <p class="form-error" id="formError" role="alert" hidden>Please fill in the required fields marked *.</p>
+      <div class="fgrid">
+        <label class="f-full"><span class="lt">School name <span class="req">*</span></span>
+          <input name="school" required autocomplete="off"></label>
+        <label><span class="lt">Village / town <span class="req">*</span></span>
+          <input name="town" required autocomplete="off"></label>
+        <label><span class="lt">District <span class="req">*</span></span>
+          <select name="district" required>
+            <option value="">Choose…</option>
+            <option>Ampara</option><option>Anuradhapura</option><option>Badulla</option><option>Batticaloa</option><option>Colombo</option><option>Galle</option><option>Gampaha</option><option>Hambantota</option><option>Jaffna</option><option>Kalutara</option><option>Kandy</option><option>Kegalle</option><option>Kilinochchi</option><option>Kurunegala</option><option>Mannar</option><option>Matale</option><option>Matara</option><option>Monaragala</option><option>Mullaitivu</option><option>Nuwara Eliya</option><option>Polonnaruwa</option><option>Puttalam</option><option>Ratnapura</option><option>Trincomalee</option><option>Vavuniya</option>
+          </select></label>
+        <label class="f-full"><span class="lt">Why this school? <span class="req">*</span></span>
+          <textarea name="why" required rows="3" placeholder="Number of students and what they need most"></textarea></label>
+        <label><span class="lt">Your name <span class="req">*</span></span>
+          <input name="name" required autocomplete="name"></label>
+        <label><span class="lt">Your phone <span class="req">*</span></span>
+          <input name="phone" required type="tel" autocomplete="tel" inputmode="tel"></label>
+      </div>
+      <p class="form-error" id="formError" role="alert" hidden>Please fill in all the fields marked *.</p>
       <div class="suggest-actions">
-        <button class="btn btn-wa" type="submit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.85 9.85 0 0 0 12.04 2zm5.8 14.03c-.25.69-1.44 1.32-1.98 1.37-.51.05-.98.24-3.3-.69-2.79-1.1-4.56-3.95-4.7-4.13-.13-.18-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.35.73-.35h.53c.17 0 .4-.06.62.48.24.56.8 1.94.87 2.08.07.14.12.3.02.48-.09.18-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.6.76 1.88.9.28.14.46.21.53.32.07.12.07.65-.18 1.33z"/></svg><span>Send suggestion on WhatsApp</span></button>
-        <a class="alt-form" id="altForm" href="#" target="_blank" rel="noopener" hidden>Prefer a Google Form? Open it here</a>
+        <button class="btn btn-wa" type="submit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.85 9.85 0 0 0 12.04 2zm5.8 14.03c-.25.69-1.44 1.32-1.98 1.37-.51.05-.98.24-3.3-.69-2.79-1.1-4.56-3.95-4.7-4.13-.13-.18-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.35.73-.35h.53c.17 0 .4-.06.62.48.24.56.8 1.94.87 2.08.07.14.12.3.02.48-.09.18-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.6.76 1.88.9.28.14.46.21.53.32.07.12.07.65-.18 1.33z"/></svg><span>Send on WhatsApp</span></button>
+        <a class="alt-form" id="altForm" href="#" target="_blank" rel="noopener" hidden>Prefer a Google Form?</a>
       </div>
-      <p class="privacy">Your details go only to the Sihina Piyapath coordinator and are used only to follow up on this suggestion.</p>
+      <p class="privacy">Your details go only to the Sihina Piyapath coordinator.</p>
     </form>
   </div>
 </section>

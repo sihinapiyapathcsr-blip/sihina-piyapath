@@ -8,7 +8,7 @@ window.SITE_CONFIG = {
      Paste the report link between the quotes, e.g. a Google Drive PDF
      shared as "Anyone with the link → Viewer". While it's empty, the
      button shows "Coming soon". */
-  REPORT_URL: "",
+  REPORT_URL: "https://drive.google.com/file/d/1UvxcRiVPwQl5nc3Ieny3Zbv1WdfHfXDe/view?usp=sharing",
 
   /* 2. SIHINA PIYAPATH 2.0 GALLERY
      To add a photo: upload it to GitHub (same place as the other files),
